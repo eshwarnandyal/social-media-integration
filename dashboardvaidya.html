@@ -1,0 +1,137 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Line, Bar, Pie } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Tooltip,
+  Legend
+);
+
+export default function Dashboard() {
+  // Dummy chart data
+  const patientGrowthData = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [
+      {
+        label: "Patients",
+        data: [50, 80, 120, 150, 200, 260],
+        borderColor: "#16a34a",
+        backgroundColor: "#16a34a",
+      },
+    ],
+  };
+
+  const doctorEngagementData = {
+    labels: ["Cardiology", "Dermatology", "Orthopedics", "Pediatrics", "ENT"],
+    datasets: [
+      {
+        label: "Engagement",
+        data: [120, 90, 70, 150, 100],
+        backgroundColor: "#2563eb",
+      },
+    ],
+  };
+
+  const socialMediaData = {
+    labels: ["Facebook", "Instagram", "Twitter"],
+    datasets: [
+      {
+        label: "Reach",
+        data: [300, 500, 200],
+        backgroundColor: ["#3b82f6", "#ec4899", "#38bdf8"],
+      },
+    ],
+  };
+
+  return (
+    <div className="p-6 bg-gray-50 min-h-screen">
+      {/* Header */}
+      <h1 className="text-3xl font-bold mb-6 text-green-700">Vaidya99 Dashboard</h1>
+
+      {/* Stats Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        <Card className="shadow-lg">
+          <CardContent className="p-4 text-center">
+            <h2 className="text-lg font-semibold">Total Patients 👥</h2>
+            <p className="text-2xl font-bold text-green-600">1,245</p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-lg">
+          <CardContent className="p-4 text-center">
+            <h2 className="text-lg font-semibold">Total Doctors 🩺</h2>
+            <p className="text-2xl font-bold text-green-600">320</p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-lg">
+          <CardContent className="p-4 text-center">
+            <h2 className="text-lg font-semibold">RMP Certified ✅</h2>
+            <p className="text-2xl font-bold text-green-600">85</p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-lg">
+          <CardContent className="p-4 text-center">
+            <h2 className="text-lg font-semibold">AI Posters 📊</h2>
+            <p className="text-2xl font-bold text-green-600">42 Today</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        <Card className="shadow-lg col-span-2">
+          <CardContent className="p-4">
+            <h2 className="text-lg font-semibold mb-2">Patient Growth</h2>
+            <Line data={patientGrowthData} />
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-lg">
+          <CardContent className="p-4">
+            <h2 className="text-lg font-semibold mb-2">Social Media Reach</h2>
+            <Pie data={socialMediaData} />
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <Card className="shadow-lg">
+          <CardContent className="p-4">
+            <h2 className="text-lg font-semibold mb-2">Doctor Engagement</h2>
+            <Bar data={doctorEngagementData} />
+          </CardContent>
+        </Card>
+
+        {/* Quick Actions */}
+        <Card className="shadow-lg">
+          <CardContent className="p-4 flex flex-col gap-4">
+            <h2 className="text-lg font-semibold">Quick Actions</h2>
+            <Button className="bg-green-600 hover:bg-green-700">➕ Add New Doctor / Patient</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700">📢 Generate Poster Now</Button>
+            <Button className="bg-gray-700 hover:bg-gray-800">📑 View Reports</Button>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}

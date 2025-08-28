@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vaidya99 Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 min-h-screen flex items-center justify-center">
+<div class="grid grid-cols-1 md:grid-cols-2 w-full max-w-6xl bg-white rounded-2xl shadow-xl overflow-hidden">
+<!-- Left Section -->
+<div class="hidden md:flex items-center justify-center bg-green-100 p-10">
+<img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/512/external-doctor-health-care-and-medical-flatart-icons-outline-flatarticons.png" alt="Doctor Patient Illustration" class="w-3/4">
+</div>
+
+
+<!-- Right Section (Login Form) -->
+<div class="flex flex-col justify-center p-8 md:p-12">
+<!-- Branding -->
+<div class="text-center mb-6">
+<h1 class="text-3xl font-bold text-green-700">Vaidya99</h1>
+<p class="text-gray-500">Connecting Doctors & Patients with AI-powered Health Tips</p>
+</div>
+
+
+<!-- Form -->
+<form class="space-y-5">
+<div>
+<label class="block text-sm font-medium text-gray-600">Username / Email</label>
+<input type="text" placeholder="Enter your username or email" class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-400 focus:outline-none">
+</div>
+
+
+<div>
+<label class="block text-sm font-medium text-gray-600">Password</label>
+<div class="relative">
+<input type="password" id="password" placeholder="Enter your password" class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-400 focus:outline-none">
+<button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-3 flex items-center text-sm text-gray-500">Show</button>
+</div>
+</div>
+
+
+<div>
+<label class="block text-sm font-medium text-gray-600 mb-2">Select Role</label>
+<div class="flex items-center gap-4">
+<label><input type="radio" name="role" value="Doctor" class="mr-1"> Doctor</label>
+<label><input type="radio" name="role" value="Patient" class="mr-1"> Patient</label>
+</div>
+</div>
+
+
+<button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition duration-200">Login</button>
+
+
+<!-- Links -->
+<div class="flex justify-between text-sm mt-3">
+<a href="./forgottenPasswordVaidya.html" class="text-green-600 hover:underline">Forgot Password?</a>
+<a href="./doctorRegistration.html" class="text-blue-600 hover:underline">New User? Register Here</a>
+</div>
+</form>
+</div>
+</div>
+
+
+<script>
+function togglePassword() {
+const passwordField = document.getElementById("password");
+const button = event.target;
+if (passwordField.type === "password") {
+passwordField.type = "text";
+button.textContent = "Hide";
+} else {
+passwordField.type = "password";
+button.textContent = "Show";
+}
+</script>
+</html>

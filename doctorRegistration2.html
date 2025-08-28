@@ -1,0 +1,57 @@
+<div class="mb-4">
+  <label class="block text-sm font-medium text-gray-700 mb-2">
+    Preferred Social Media for Posting Health Tips:
+  </label>
+
+  <div class="space-y-2">
+    <!-- Facebook -->
+    <label class="flex items-center">
+      <input type="checkbox" value="Facebook" class="mr-2 social-checkbox"> Facebook
+    </label>
+    <input type="text" placeholder="Enter Facebook Page/Profile link"
+           class="hidden border rounded p-2 text-sm w-full facebook-input">
+
+    <!-- Instagram -->
+    <label class="flex items-center">
+      <input type="checkbox" value="Instagram" class="mr-2 social-checkbox"> Instagram
+    </label>
+    <input type="text" placeholder="Enter Instagram Handle/Link"
+           class="hidden border rounded p-2 text-sm w-full instagram-input">
+
+    <!-- Twitter -->
+    <label class="flex items-center">
+      <input type="checkbox" value="Twitter" class="mr-2 social-checkbox"> Twitter
+    </label>
+    <input type="text" placeholder="Enter Twitter Handle/Link"
+           class="hidden border rounded p-2 text-sm w-full twitter-input">
+
+    <!-- LinkedIn -->
+    <label class="flex items-center">
+      <input type="checkbox" value="LinkedIn" class="mr-2 social-checkbox"> LinkedIn
+    </label>
+    <input type="text" placeholder="Enter LinkedIn Profile/Link"
+           class="hidden border rounded p-2 text-sm w-full linkedin-input">
+
+    <!-- Other -->
+    <label class="flex items-center">
+      <input type="checkbox" value="Other" class="mr-2 social-checkbox"> Other
+    </label>
+    <input type="text" placeholder="Enter Other Platform Name"
+           class="hidden border rounded p-2 text-sm w-full other-input">
+  </div>
+</div>
+
+<script>
+  // Get all checkboxes
+  document.querySelectorAll('.social-checkbox').forEach((checkbox) => {
+    checkbox.addEventListener('change', function () {
+      let inputField = document.querySelector(`.${this.value.toLowerCase()}-input`);
+      if (this.checked) {
+        inputField.classList.remove("hidden"); // Show input
+      } else {
+        inputField.classList.add("hidden"); // Hide input
+        inputField.value = ""; // Clear value when unchecked
+      }
+    });
+  });
+</script>
