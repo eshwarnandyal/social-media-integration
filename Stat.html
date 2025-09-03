@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Poster Generator - vaidya99</title>
+    <link rel="stylesheet" href="./vaidyaindex.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">vaidya99</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="./vaidyaindex.html" class="nav-link">Dashboard</a>
+                <a href="Stat.html" class="nav-link active">AI Poster Generator</a>
+                <a href="./doctorchat.html" class="nav-link">Doctor Chat</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="subscription.html" class="nav-link">Subscription</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-link">Profile</a>
+                <a href="#" class="nav-link">Settings</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>AI Health Awareness Poster Generator</h1>
+                <p>Create compelling health awareness posters in seconds.</p>
+            </header>
+
+            <div class="generator-layout">
+                <div class="card">
+                    <form id="poster-form">
+                        <div class="form-group">
+                            <label for="health-topic">Health Topic</label>
+                            <select id="health-topic" name="health-topic" required>
+                                <option value="">Select a health awareness topic</option>
+                                <option value="Mental Health Awareness Week">Mental Health Awareness Week</option>
+                                <option value="Lung Cancer Awareness">Lung Cancer Awareness</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor-name">Doctor's Name</label>
+                            <input type="text" id="doctor-name" name="doctor-name" placeholder="Dr. Emily Carter" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Generate Poster</button>
+                    </form>
+                </div>
+
+                <div class="card poster-preview-container">
+                    <h2 class="section-title">Poster Preview</h2>
+                    <div id="poster-preview" class="poster-preview-area">
+                        <p>Your poster will appear here</p>
+                        <span>Fill out the fields to generate a preview.</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./postergeneration.js"></script>
+</body>
+</html>

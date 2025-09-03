@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>support chat</title>
+    <link rel="stylesheet" href="./support.css">
+    <link rel="stylesheet" href="./vaidyaindex.css">
+</head>
+<body>
+    <script src="./support.js"></script>
+    <!-- Sidebar 
+  <div class="sidebar">
+    <div class="logo">vaidya99</div>
+    <a href="./Stat.html"><div class="menu-item">Dashboard</div></a></a>
+    <a href="./vaidyaindex.html"><div class="menu-item">AI Poster Generator</div></a>
+    <a href="./doctorchat.html"><div class="menu-item">Doctor Chat</div></a>
+    <a href="./support.html"><div class="menu-item">Support</div></a>
+    <div class="menu-item">Subscription</div>
+  </div>
+-->
+  <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">vaidya99</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="./vaidyaindex.html" class="nav-link">Dashboard</a>
+                <a href="./Stat.html" class="nav-link">AI Poster Generator</a>
+                <a href="./doctorchat.html" class="nav-link">Doctor Chat</a>
+                <a href="./support.html" class="nav-link active">Support</a>
+                <a href="./subscription.html" class="nav-link">Subscription</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-link">Profile</a>
+                <a href="#" class="nav-link">Settings</a>
+            </div>
+        </aside>
+  <!-- Support Section -->
+  <div class="support-container">
+    <!-- Developer List -->
+    <div class="developer-list">
+      <div class="search-box">
+        <input type="text" placeholder="Search developers...">
+      </div>
+
+      <div class="developer active">
+        <div class="avatar">A</div>
+        <div class="dev-info">
+          <span>Alex Smith</span>
+          <span>Frontend Developer</span>
+        </div>
+      </div>
+
+      <div class="developer">
+        <div class="avatar">M</div>
+        <div class="dev-info">
+          <span>Maria Garcia</span>
+          <span>Backend Developer</span>
+        </div>
+      </div>
+
+      <div class="developer">
+        <div class="avatar">S</div>
+        <div class="dev-info">
+          <span>Sam Wilson</span>
+          <span>Full Stack Developer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window">
+      <div class="chat-header">
+        Alex Smith <span class="status">Online</span>
+      </div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="message sent">Hi Alex, I'm having trouble with the poster generator. It's not creating a poster.</div>
+        <div class="message received">Hi there. Sorry to hear that. Can you tell me what topic and doctor name you are using?</div>
+      </div>
+
+      <div class="chat-footer">
+        <input type="text" id="messageInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

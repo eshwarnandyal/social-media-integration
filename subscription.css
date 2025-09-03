@@ -1,0 +1,143 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+
+    .logo {
+        color: #4f46e5;
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-align: center;
+    }
+
+    .menu-item {
+      padding: 12px 20px;
+      color: #333;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .menu-item:hover,
+    .menu-item.active {
+      background: #f0f0f0;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .plans-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .plans-header h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .plans-header p {
+      margin: 5px 0 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .plans-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .plan-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 280px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.2s;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .plan-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .plan-price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 5px;
+    }
+
+    .plan-duration {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .plan-features li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .plan-features li::before {
+      content: "✓ ";
+      color: #4a90e2;
+      font-weight: bold;
+    }
+
+    .subscribe-btn {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .subscribe-btn:hover {
+      background: #357ab8;
+    }

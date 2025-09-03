@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+    <link rel="stylesheet" href="./subscription.css">
+    <link rel="stylesheet" href="./vaidyaindex.css">
+</head>
+<body>
+    <script src="./Subscription.js"></script>
+    <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">vaidya99</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="./vaidyaindex.html" class="nav-link">Dashboard</a>
+                <a href="./Stat.html" class="nav-link">AI Poster Generator</a>
+                <a href="./doctorchat.html" class="nav-link">Doctor Chat</a>
+                <a href="./support.html" class="nav-link">Support</a>
+                <a href="./subscription.html" class="nav-link active">Subscription</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-link">Profile</a>
+                <a href="#" class="nav-link">Settings</a>
+            </div>
+        </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="plans-header">
+      <h2>Subscription Plans</h2>
+      <p>Choose the plan that's right for you.</p>
+    </div>
+
+    <div class="plans-container">
+      <!-- Monthly -->
+      <div class="plan-card">
+        <div class="plan-title">Monthly Plan</div>
+        <div class="plan-price">5000/-</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>AI Poster Generator</li>
+          <li>Doctor Chat</li>
+          <li>Basic Support</li>
+        </ul>
+        <button class="subscribe-btn" onclick="subscribe('Monthly')">Subscribe to Monthly</button>
+      </div>
+
+      <!-- Quarterly -->
+      <div class="plan-card">
+        <div class="plan-title">Quarterly Plan</div>
+        <div class="plan-price">10000/-</div>
+        <div class="plan-duration">/quarter</div>
+        <ul class="plan-features">
+          <li>Everything in Monthly</li>
+          <li>Priority Support</li>
+          <li>Advanced Analytics</li>
+        </ul>
+        <button class="subscribe-btn" onclick="subscribe('Quarterly')">Subscribe to Quarterly</button>
+      </div>
+
+      <!-- Annually -->
+      <div class="plan-card">
+        <div class="plan-title">Annually Plan</div>
+        <div class="plan-price">25000/-</div>
+        <div class="plan-duration">/year</div>
+        <ul class="plan-features">
+          <li>Everything in Quarterly</li>
+          <li>24/7 Support</li>
+          <li>Custom Branding</li>
+        </ul>
+        <button class="subscribe-btn" onclick="subscribe('Annually')">Subscribe to Annually</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
