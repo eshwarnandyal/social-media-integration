@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Profile - Vaidya99</title>
+  <link rel="stylesheet" href="doctorProfile.css">
+  <!-- Firebase SDK -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="profile-container">
+    <h1>Doctor Profile</h1>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <img src="https://img.icons8.com/color/96/doctor-male--v1.png" alt="Doctor Avatar" class="profile-pic">
+      <div class="profile-info" id="doctorDetails">
+        <h2 id="doctorName">Loading...</h2>
+        <p><strong>Email:</strong> </p>
+        <p><strong>Specialization:</strong> </p>
+        <p><strong>Experience:</strong> </p>
+        <p><strong>Hospital:</strong> </p>
+        <p><strong>Qualifications:</strong> </p>
+        <p><strong>Consultation Timings:</strong> </p>
+        <p><strong>Languages:</strong> </p>
+        <div class="social-links">
+          <p><strong>Social Media:</strong></p>
+          <a href="#" id="facebookLink" target="_blank">Facebook</a> |
+          <a href="#" id="instagramLink" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Profile Section -->
+    <div class="edit-section">
+      <h2>Edit Profile</h2>
+      <form id="editForm">
+        <label>Full Name:</label>
+        <input type="text" id="editName" required>
+
+        <label>Email:</label>
+        <input type="email" id="editEmail" required>
+
+        <label>Specialization:</label>
+        <input type="text" id="editSpecialization" required>
+
+        <label>Experience (Years):</label>
+        <input type="number" id="editExperience" required>
+
+        <label>Hospital/Clinic:</label>
+        <input type="text" id="editHospital" required>
+
+        <label>Qualifications:</label>
+        <input type="text" id="editQualifications" required>
+
+        <label>Consultation Timings:</label>
+        <input type="text" id="editTimings" required>
+
+        <label>Languages:</label>
+        <input type="text" id="editLanguages" required>
+
+        <label>Facebook Link:</label>
+        <input type="url" id="editFacebook" placeholder="Enter Facebook link" required>
+
+        <label>Instagram Link:</label>
+        <input type="url" id="editInstagram" placeholder="Enter Instagram link" required>
+
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="doctorProfile.js"></script>
+</body>
+</html>

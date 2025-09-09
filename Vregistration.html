@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration - Vaidya99</title>
+    <link rel="stylesheet" href="./Vregistration.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Registration</h1>
+        <form id="registrationForm" class="form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="hospital" placeholder="Hospital / Clinic Name" required>
+            <input type="number" id="experience" placeholder="Years of Experience" required>
+            <input type="text" id="regNo" placeholder="Registration Number" required>
+            <select id="specialization" required>
+                <option value="" disabled selected>Select Specialization</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Oncology">Oncology</option>
+                <option value="Orthopedics">Orthopedics</option>
+                <option value="Pediatrics">Pediatrics</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p class="text-small">
+            Already registered? <a href="./Vlogin.html">Login here</a>
+        </p>
+    </div>
+    <script type="module" src="./Vregistrtion.js"></script>
+</body>
+</html>
